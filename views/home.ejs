@@ -1,0 +1,31 @@
+<%- include('./partials/header') -%>
+<div class="top">
+    <div class="head">
+        <h1>IP Address Tracker</h1>
+    </div>
+<div class="dis">
+    <div class="data">
+        <form action="/" method="POST">
+            <input type="text" name="ipAddress" placeholder="Search for any IP address or domain">
+            <button type="submit"><img src="/images/icon-arrow.svg" alt=""></button>
+        </form>
+    </div>
+</div>
+<div class="dis">
+    <div class="details">
+        <div class="dt brlr"><h1><%=ipAddress%></h1><hr></div>
+        <input type="hidden" name="<%=lat%>" value="<%=lng%>">
+        <div class="dt"><h1><%=location%></h1></div>
+        <hr>
+        <div class="dt"><h1><%=timezone%></h1></div>
+        <hr>
+        <div class="dt brrr ri"><h1><%=isp%></h1></div>
+    </div>
+</div>
+</div>
+<div id="mapid"></div>
+<!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+</div> -->
+<%- include('./partials/footer') -%>
