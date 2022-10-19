@@ -42,8 +42,6 @@ app.get('/', (req, res) => {
 })
 app.post('/', (req, res) => {
     getIpAddress = req.body.ipAddress
-    console.log(getIpAddress);
-    console.log(url);
     request({
         url:`https://geo.ipify.org/api/v1?apiKey=${process.env.ACCESS_TOKEN}&ipAddress=${getIpAddress}`
     }, (err, response) => {
