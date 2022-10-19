@@ -72,6 +72,8 @@ app.post('/', (req, res) => {
     })
 
 })
-app.listen(3000, (req, res) => {
+
+const port  = process.env.PORT || 3000
+app.listen(port, (req, res) => {
     console.log('Server is up and running!');
 })
